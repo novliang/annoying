@@ -5,3 +5,7 @@ type AuthAssignment struct {
 	ItemName string `json:"item_name"`
 	UserId   string `json:"user_id"`
 }
+
+func (AuthAssignment) TableName() string {
+	return "auth_assignment"
+}
