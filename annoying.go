@@ -12,11 +12,11 @@ type ItemInter interface {
 }
 
 type Role struct {
-	*AuthItem
+	*Item
 }
 
 type Permission struct {
-	*AuthItem
+	*Item
 }
 
 type Item struct {
@@ -85,10 +85,6 @@ func CheckAccessRecursive(userId string, itemName string, params map[string]stri
 
 func HasNoAssignments(assignments *AssignmentsNameIndexed) bool {
 	return (assignments == nil || len(*assignments) == 0) && len(DefaultRoles) == 0
-}
-
-func GetRules() {
-
 }
 
 func GetAssignment(roleName string, userId string) (*Assignment) {
@@ -366,8 +362,4 @@ func CreatePermission(name string) *Permission {
 	p := new(Permission)
 	p.Name = name
 	return p
-}
-
-func Add(interface{}) {
-
 }
