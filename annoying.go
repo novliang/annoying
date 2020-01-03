@@ -231,7 +231,7 @@ func Revoke(role *Role, userId string) bool {
 	if userId == "" {
 		return false
 	}
-	d := Db.Where("user_id = ? and item_name", userId, role.Id).Delete(AuthAssignment{})
+	d := Db.Where("user_id = ? and item_name", userId, role.Name).Delete(AuthAssignment{})
 
 	if d.Error != nil {
 		return false
