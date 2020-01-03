@@ -6,6 +6,6 @@ type AuthItemChild struct {
 	Child  string `json:"child"`
 }
 
-func (AuthItemChild) TableName() string {
+func (*AuthItemChild) TableName() string {
 	return "auth_item_child"
 }

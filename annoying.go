@@ -45,8 +45,8 @@ func LoadDbInstance(db *gorm.DB) {
 type AssignmentsNameIndexed map[string]Assignment
 
 func CheckAssess(userId string, permissionName string, params map[string]string) bool {
-	assignments := GetAssignments(userId)
 
+	assignments := GetAssignments(userId)
 	if HasNoAssignments(assignments) {
 		return false
 	}

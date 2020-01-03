@@ -6,6 +6,6 @@ type AuthRule struct {
 	Data []byte `json:"data"`
 }
 
-func (AuthRule) TableName() string {
+func (*AuthRule) TableName() string {
 	return "auth_rule"
 }

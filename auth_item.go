@@ -17,6 +17,6 @@ func (a *AuthItem) GetName() string {
 	return a.Name
 }
 
-func (AuthItem) TableName() string {
+func (*AuthItem) TableName() string {
 	return "auth_item"
 }
